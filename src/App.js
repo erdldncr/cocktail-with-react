@@ -10,7 +10,21 @@ import Navbar from './components/Navbar'
 function App() {
   return (
     <div>
-      <h2>app component</h2>
+      <Navbar/>
+      <Switch>
+        <Route path='/'exact  >
+          <Home/>
+        </Route>
+        <Route path='/about'exact  >
+          <About/>
+        </Route>
+        <Route path='/cocktail/:id'  >
+          <SingleCocktail/>
+        </Route>
+        <Route path='*'  >
+          <Error/>
+        </Route>
+      </Switch>
     </div>
   )
 }
